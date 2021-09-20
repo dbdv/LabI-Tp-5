@@ -43,4 +43,32 @@ public class Arreglo {
         
         return mayor;
     }
+    
+    public static int cuentaVocales(String string){
+        int cantVocales = 0;
+        char[] vocales = {'a','e','i','o','u'};
+        
+        for (int i = 0; i < string.length(); i++) {
+            for (int j = 0; j < 5; j++) {
+                if (string.charAt(i) == vocales[j]) {
+                    cantVocales++;
+                }
+            }
+        }
+
+        return cantVocales;
+    }
+  
+    public static int cuentaCaracter(String string, char carac) {
+        int vecesCarac = 0;
+
+        for (int i = 0; i < string.length(); i++) {
+
+            if (string.charAt(i) == carac) {
+                vecesCarac++;
+            }
+        }
+
+        return vecesCarac;
+    }
 }
